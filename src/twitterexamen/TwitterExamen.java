@@ -29,14 +29,9 @@ public class TwitterExamen {
      */
     public static void main(String[] args) {
         try {
-            ConfigurationBuilder cb = new ConfigurationBuilder();
-            cb.setDebugEnabled(true)
-                    .setOAuthConsumerKey(XXX)
-                    .setOAuthConsumerSecret(XXX)
-                    .setOAuthAccessToken(XXX)
-                    .setOAuthAccessTokenSecret(XXX);
+            
 
-            Twitter twitter = new TwitterFactory(cb.build()).getInstance();
+            Twitter twitter = new TwitterFactory().getInstance();
             PostTwitter(twitter);
             GetTimeLine(twitter);
             BuscarPorHash(twitter);
